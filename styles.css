@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1F2326; /* Fondo oscuro del tema de Sage */
+    color: #F6F4F0;
+}
+
+.hero {
+    height: 100%;
+    background: linear-gradient(45deg, #2E5077, #79D7BE); /* Colores Sage */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #F6F4F0;
+}
+
+.texto-detras {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el texto esté detrás del spline-viewer */
+    color: white; /* Cambia el color según tu diseño */
+    text-align: center; /* Alinea el texto */
+    margin-top: 20px; /* Ajusta el margen superior */
+}
+
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2E5077; /* Verde oscuro de Sage */
+    box-shadow: 0 4px 6px rgb(46, 80, 119); /* Sombra turquesa */
+    transition: transform 0.3s ease;
+}
+
+.feature ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.feature li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 18px;
+    color: #79D7BE; /* Turquesa de Sage */
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgb(46, 80, 119);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #14B0C9; /* Borde turquesa */
+}
+
+h1 {
+    font-size: 10rem;
+    margin-bottom: 1rem;
+    color: #F6F4F0;
+    text-shadow: 0 0 10px rgb(46, 80, 119);
+}
+
+.subtitulo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #79D7BE; /* Turquesa de Sage */
+}
+
+.text{
+    font-size: 1.6rem;
+}
+
+h2 {
+    color: #79D7BE; /* Turquesa de Sage */
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #F6F4F0; /* Gris claro para mejor legibilidad */
+    margin-top: 1rem;
+}
+
+.mi-boton {
+    background-color: #2E5077;
+    color: #F6F4F0;
+  }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .feature {
+        margin: 20px 0;
+    }
+}
