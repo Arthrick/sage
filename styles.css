@@ -70,6 +70,35 @@ body {
     box-shadow: 0 6px 8px rgb(46, 80, 119);
 }
 
+.feature1{
+    text-align: center;
+    padding: 5%;
+    margin-top: 50px;
+}
+
+.feature1 ul.text {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    display: flex;
+    justify-content: center;
+  }
+  
+.feature1 ul.text li {
+    margin-right: 50px;
+}
+
+.feature1 ul.text li img {
+    width: 90px;
+    height: 90px;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+.feature1 ul.text li img:hover {
+    transform: scale(1.2);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -121,4 +150,15 @@ h2 {
     .feature {
         margin: 20px 0;
     }
+}
+
+.colores {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    bottom: 10px;
+    left: px;
+}
+
+.descripcion{
+    padding-top: 5%;
 }
