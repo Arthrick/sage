@@ -1,24 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import SplineViewer from '@splinetool/viewer';
+import React, { lazy, Suspense, useState, useEffect, useCallback, useMemo } from 'react';
 
-const Hero = () => {
-  const [loaded, setLoaded] = useState(false);
+const SplineViewer = lazy(() => import('spline-viewer'));
+
+function Hero() {
+  const [loading, setLoading] = useState(true);
+  const [splineViewerUrl, setSplineViewerUrl] = useState('https://prod.spline.design/1mvT0qRXyqZRH4yo/scene.splinecode');
 
   useEffect(() => {
-    const loadSplineViewer = async () => {
-      await import('@splinetool/viewer');
-      setLoaded(true);
-    };
-    loadSplineViewer();
+    setLoading(false);
   }, []);
+
+  const handleSplineViewerUrlChange = useCallback((newUrl) => {
+    setSplineViewerUrl(newUrl);
+  }, []);
+
+  const memoizedSplineViewer = useMemo(() => {
+    return (
+      <SplineViewer url={splineViewerUrl} />
+    );
+  }, [splineViewerUrl]);
 
   return (
     <div className="hero">
-      {loaded && (
-        <SplineViewer url="https://prod.spline.design/1mvT0qRXyqZRH4yo/scene.splinecode" />
-      )}
+      <Suspense fallback={<div>Cargando...</div>}>
+        {memoizedSplineViewer}
+      </Suspense>
     </div>
   );
-};
+}
 
 export default Hero;
