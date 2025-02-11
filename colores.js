@@ -29,3 +29,18 @@ function getBrightness(color) {
     const b = parseInt(hex.substr(4, 2), 16);
     return ((r * 299) + (g * 587) + (b * 114)) / 1000;
 }
+
+// Función para calcular el brillo del color
+function getBrightness(color) {
+    const hex = color.replace('#', '');
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    return ((r * 299) + (g * 587) + (b * 114)) / 1000;
+}
+
+import { Application } from '@splinetool/runtime';
+
+const canvas = document.getElementById('canvas3d');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/wl3gHK1lq7-sv9mz/scene.splinecode');
