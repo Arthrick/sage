@@ -18,7 +18,7 @@ p {
   margin: calc(50vh - 40px) auto 0 auto;
   font-size: 65px;
   text-transform: uppercase;
-  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-family: "Revalia", serif;
   font-weight: normal;
   display: block;
   height: auto;
@@ -32,7 +32,7 @@ p {
   top: 0;
   left: 0;
   margin: 1%;
-  padding-left: 29%;
+  padding-left: 27%;
 }
 
 @keyframes neon {
