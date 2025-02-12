@@ -305,17 +305,17 @@ h2 {
 }
 
 .cards h1 {
-    color: #ffffff;
-    font-size: 32px;
+    color: #79D7BE;
+    font-size: 30px;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 30px;
     transform: translateZ(35px);
 }
 
-.cards h3 {
-    color: #79D7BE;
-    font-size: 16px;
+.cards h2 {
+    color: #ffffff;
+    font-size: 30px;
     margin-bottom: 6px;
     transform: translateZ(25px);
 }
