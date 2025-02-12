@@ -9,3 +9,14 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Hero from './Hero';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Hero />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
